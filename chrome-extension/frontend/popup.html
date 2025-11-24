@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Comment Sentiment</title>
+    <style>
+      body { background: #222; color: #eee; font-family: Arial; transition: background 0.2s, color 0.2s;}
+      .comment { margin: 8px 0; }
+      .positive { color: #43a047 }
+      .negative { color: #e53935 }
+      .neutral { color: #757575 }
+      body.light { background: #fff; color: #222; }
+      .button-row { margin: 8px 0; display: flex; gap: 8px; }
+    </style>
+  </head>
+  <body>
+    <h3>Analyze YouTube Comments</h3>
+    <div class="button-row">
+      <button id="analyze">Get Sentiment</button>
+      <button id="copy">Copy Results</button>
+      <button id="toggle-mode">Dark/Light</button>
+      <label for="filter">Filter:</label>
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="1">Positive</option>
+        <option value="0">Neutral</option>
+        <option value="-1">Negative</option>
+      </select>
+    </div>
+    <div id="stats"></div>
+    <div id="results"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
